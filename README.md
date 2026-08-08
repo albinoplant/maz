@@ -17,37 +17,29 @@ npm run build
 
 Output lands in `dist/`.
 
-## Preview (Vite)
+## Preview
 
 ```bash
 npm run preview
 ```
 
-## Preview as Cloudflare Pages (Wrangler)
-
-```bash
-npm run build
-npm run pages:dev
-```
-
-This serves `dist` via `wrangler pages dev`.
-
 ## Deploy to Cloudflare Pages
 
-**Option A — Dashboard**
+**Git-connected project settings**
 
-1. Push this repo to GitHub.
-2. In [Cloudflare Pages](https://dash.cloudflare.com/), create a project and connect the repo.
-3. Build settings:
-   - **Build command:** `npm run build`
-   - **Build output directory:** `dist`
-   - **Framework preset:** Vite (or None)
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler pages deploy dist` |
+| Non-production branch deploy command | `npx wrangler pages deploy dist` (or leave empty if optional) |
 
-**Option B — CLI**
+`wrangler.toml` sets `pages_build_output_dir = "dist"` and `name = "maz"`.
+
+**CLI**
 
 ```bash
 npm run build
 npx wrangler pages deploy dist
 ```
 
-No Workers or Functions in v1 — pure static hosting.
+No Workers/Functions in v1 — pure static site.
