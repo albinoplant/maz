@@ -23,23 +23,21 @@ Output lands in `dist/`.
 npm run preview
 ```
 
-## Deploy to Cloudflare Pages
+## Deploy to Cloudflare
 
-**Git-connected project settings**
+Git-connected build settings:
 
 | Setting | Value |
 | --- | --- |
 | Build command | `npm run build` |
-| Deploy command | `npx wrangler pages deploy dist` |
-| Non-production branch deploy command | `npx wrangler pages deploy dist` (or leave empty if optional) |
+| Deploy command | `npx wrangler deploy` |
+| Non-production branch deploy command | `npx wrangler deploy` |
 
-`wrangler.toml` sets `pages_build_output_dir = "dist"` and `name = "maz"`.
+Do not use `wrangler pages deploy` here — the build token lacks Pages API access, and this project serves static files via Workers Assets (`[assets]` in `wrangler.toml`).
 
 **CLI**
 
 ```bash
 npm run build
-npx wrangler pages deploy dist
+npx wrangler deploy
 ```
-
-No Workers/Functions in v1 — pure static site.
