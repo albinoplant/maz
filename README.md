@@ -35,6 +35,7 @@ In the Cloudflare project settings (not only in git):
 
 `wrangler.toml` must include `name` and `pages_build_output_dir` (already set).
 
+
 **CLI**
 
 ```bash
