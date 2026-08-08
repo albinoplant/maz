@@ -1,8 +1,3 @@
 name = "maz"
 compatibility_date = "2026-08-08"
-
-# Workers Static Assets — use with Cloudflare's required Deploy command:
-#   npx wrangler deploy
-[assets]
-directory = "./dist"
-not_found_handling = "single-page-application"
+pages_build_output_dir = "dist"
