@@ -16,7 +16,7 @@ const atelierImage =
           About
         </h2>
         <p class="mt-6 text-base leading-relaxed text-stone-600">
-          MAZ is an architecture and interior studio focused on quiet, lasting spaces. We work
+          342 studio is an architecture and interior practice focused on quiet, lasting spaces. We work
           with light as a material, and with restraint as a method—preferring fewer, better
           decisions over ornament.
         </p>

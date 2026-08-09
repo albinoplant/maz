@@ -20,7 +20,7 @@ const themeOverrides = computed<GlobalThemeOverrides>(() => ({
     primaryColorPressed: '#3a4132',
     primaryColorSuppl: '#6b7360',
     borderRadius: '2px',
-    fontFamily: "'DM Sans', system-ui, sans-serif",
+    fontFamily: "'EB Garamond', Garamond, 'Times New Roman', serif",
     textColorBase: '#1a1917',
   },
   Button: {

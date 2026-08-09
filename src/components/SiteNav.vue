@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import { NButton, NDrawer, NDrawerContent } from 'naive-ui'
+import logo from '../assets/logo-hand.png'
 
 const open = ref(false)
 const solid = ref(false)
 
 const links = [
-  { href: '#projects', label: 'Projects' },
-  { href: '#about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#projects', label: 'projects' },
+  { href: '#about', label: 'about' },
+  { href: '#contact', label: 'contact' },
 ]
 
 function onScroll() {
-  solid.value = window.scrollY > window.innerHeight * 0.72
+  solid.value = window.scrollY > 24
 }
 
 function close() {
@@ -34,17 +35,16 @@ onUnmounted(() => {
     class="fixed inset-x-0 top-0 z-50 transition-colors duration-300"
     :class="
       solid
-        ? 'border-b border-stone-200 bg-stone-50/90 backdrop-blur-md'
-        : 'border-b border-transparent bg-stone-900/15 backdrop-blur-md'
+        ? 'border-b border-stone-200 bg-white/90 backdrop-blur-md'
+        : 'border-b border-transparent bg-transparent'
     "
   >
     <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-10">
-      <a
-        href="#top"
-        class="font-display text-2xl tracking-wide transition-colors"
-        :class="solid ? 'text-stone-900' : 'text-stone-50'"
-      >
-        MAZ
+      <a href="#top" class="inline-flex items-center transition-opacity hover:opacity-70">
+        <span class="text-lg mr-2 mt-3">
+          studio
+        </span>
+        <img :src="logo" alt="342." class="h-8 w-auto md:h-9" width="1212" height="813" />
       </a>
 
       <nav class="hidden items-center gap-10 md:flex" aria-label="Primary">
@@ -52,12 +52,7 @@ onUnmounted(() => {
           v-for="link in links"
           :key="link.href"
           :href="link.href"
-          class="text-sm tracking-wide transition-colors"
-          :class="
-            solid
-              ? 'text-stone-600 hover:text-stone-900'
-              : 'text-stone-100/85 hover:text-stone-50'
-          "
+          class="text-sm tracking-wide text-stone-600 transition-colors hover:text-stone-900"
         >
           {{ link.label }}
         </a>
@@ -70,14 +65,8 @@ onUnmounted(() => {
         @click="open = true"
       >
         <span class="flex flex-col gap-1.5" aria-hidden="true">
-          <span
-            class="block h-px w-5 transition-colors"
-            :class="solid ? 'bg-stone-900' : 'bg-stone-50'"
-          />
-          <span
-            class="block h-px w-5 transition-colors"
-            :class="solid ? 'bg-stone-900' : 'bg-stone-50'"
-          />
+          <span class="block h-px w-5 bg-stone-900" />
+          <span class="block h-px w-5 bg-stone-900" />
         </span>
       </button>
     </div>
@@ -97,7 +86,7 @@ onUnmounted(() => {
         </nav>
         <template #footer>
           <NButton block type="primary" tag="a" href="#contact" @click="close">
-            Contact
+            contact
           </NButton>
         </template>
       </NDrawerContent>

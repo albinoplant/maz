@@ -1,4 +1,4 @@
-# MAZ Studio
+# 342 studio
 
 Single-page site for an architecture / interior design studio. Vue 3 + Vite + TypeScript, Tailwind CSS, and Naive UI.
 

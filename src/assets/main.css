@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'EB Garamond', Garamond, 'Times New Roman', serif;
+  --font-sans: 'EB Garamond', Garamond, 'Times New Roman', serif;
 
   --color-stone-50: #f7f6f4;
   --color-stone-100: #ebe9e4;

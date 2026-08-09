@@ -57,64 +57,64 @@ async function handleSubmit(e: Event) {
 </script>
 
 <template>
-  <section id="contact" class="bg-stone-50 py-24 md:py-32" aria-labelledby="contact-heading">
-    <div class="mx-auto grid max-w-7xl gap-14 px-6 md:grid-cols-2 md:gap-20 md:px-10">
-      <div class="reveal">
-        <p class="text-xs tracking-[0.2em] text-olive uppercase">Inquire</p>
-        <h2 id="contact-heading" class="mt-3 font-display text-4xl text-stone-900 md:text-5xl">
-          Contact
-        </h2>
-        <p class="mt-6 max-w-md text-base leading-relaxed text-stone-600">
-          Tell us about a site, a renovation, or an interior brief. We reply within a few
-          business days.
-        </p>
-        <div class="mt-10 space-y-2 text-sm text-stone-600">
-          <p>
-            <a class="transition-colors hover:text-olive" href="mailto:hello@maz.studio">
-              hello@maz.studio
-            </a>
+  <section
+    id="contact"
+    class="relative overflow-hidden bg-stone-50 py-24 md:py-32"
+    aria-labelledby="contact-heading"
+  >
+    <div class="pointer-events-none select-none blur-sm" aria-hidden="true">
+      <div class="mx-auto grid max-w-7xl gap-14 px-6 md:grid-cols-2 md:gap-20 md:px-10">
+        <div>
+          <p class="text-xs tracking-[0.2em] text-olive uppercase">Inquire</p>
+          <h2 id="contact-heading" class="mt-3 font-display text-4xl text-stone-900 md:text-5xl">
+            Contact
+          </h2>
+          <p class="mt-6 max-w-md text-base leading-relaxed text-stone-600">
+            Tell us about a site, a renovation, or an interior brief. We reply within a few
+            business days.
           </p>
-          <p>Gdańsk, Poland</p>
+          <div class="mt-10 space-y-2 text-sm text-stone-600">
+            <p>hello@maz.studio</p>
+            <p>Gdańsk, Poland</p>
+          </div>
+        </div>
+
+        <div>
+          <NForm
+            ref="formRef"
+            :model="model"
+            :rules="rules"
+            size="large"
+            :show-require-mark="false"
+            @submit="handleSubmit"
+          >
+            <NFormItem path="name" label="Name">
+              <NInput v-model:value="model.name" placeholder="Your name" />
+            </NFormItem>
+            <NFormItem path="email" label="Email">
+              <NInput v-model:value="model.email" placeholder="you@example.com" />
+            </NFormItem>
+            <NFormItem path="message" label="Message">
+              <NInput
+                v-model:value="model.message"
+                type="textarea"
+                placeholder="Project type, location, timeline…"
+                :autosize="{ minRows: 4, maxRows: 8 }"
+              />
+            </NFormItem>
+            <div class="mt-2 flex items-center gap-4">
+              <NButton type="primary" attr-type="submit" class="px-8!">Send message</NButton>
+            </div>
+          </NForm>
         </div>
       </div>
+    </div>
 
-      <div class="reveal" style="transition-delay: 100ms">
-        <NForm
-          ref="formRef"
-          :model="model"
-          :rules="rules"
-          size="large"
-          :show-require-mark="false"
-          @submit="handleSubmit"
-        >
-          <NFormItem path="name" label="Name">
-            <NInput v-model:value="model.name" placeholder="Your name" />
-          </NFormItem>
-          <NFormItem path="email" label="Email">
-            <NInput v-model:value="model.email" placeholder="you@example.com" />
-          </NFormItem>
-          <NFormItem path="message" label="Message">
-            <NInput
-              v-model:value="model.message"
-              type="textarea"
-              placeholder="Project type, location, timeline…"
-              :autosize="{ minRows: 4, maxRows: 8 }"
-            />
-          </NFormItem>
-          <div class="mt-2 flex items-center gap-4">
-            <NButton
-              type="primary"
-              attr-type="submit"
-              :loading="submitting"
-              :disabled="submitted"
-              class="px-8!"
-            >
-              {{ submitted ? 'Sent' : 'Send message' }}
-            </NButton>
-            <p v-if="submitted" class="text-sm text-stone-500">Opening your email client…</p>
-          </div>
-        </NForm>
-      </div>
+    <div
+      class="absolute inset-0 z-10 flex items-center justify-center bg-stone-50/40"
+      role="status"
+    >
+      <p class="font-display text-4xl tracking-wide text-stone-900 md:text-5xl">Coming soon</p>
     </div>
   </section>
 </template>
