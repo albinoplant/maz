@@ -9,24 +9,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'atelier-nord',
-    title: 'Atelier Nord',
-    location: 'Gdańsk, Poland',
-    category: 'Interior',
-    image:
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
-    year: '2024',
-  },
-  {
-    id: 'courtyard-house',
-    title: 'Courtyard House',
-    location: 'Kraków, Poland',
-    category: 'Residential',
-    image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-    year: '2023',
-  },
-  {
     id: 'linen-loft',
     title: 'Linen Loft',
     location: 'Warsaw, Poland',
@@ -52,14 +34,5 @@ export const projects: Project[] = [
     image:
       'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
     year: '2023',
-  },
-  {
-    id: 'quiet-office',
-    title: 'Quiet Office',
-    location: 'Wrocław, Poland',
-    category: 'Workplace',
-    image:
-      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80',
-    year: '2025',
   },
 ]

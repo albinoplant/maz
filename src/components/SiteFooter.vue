@@ -12,18 +12,17 @@ const year = new Date().getFullYear()
       <div>
         <img :src="logo" alt="342." class="h-10 w-auto" width="1212" height="813" />
         <p class="mt-2 max-w-sm text-sm leading-relaxed text-stone-600">
-          Architecture &amp; interior studio. Spaces shaped by light, material, and quiet
-          proportion.
+          Interior design studio. Spaces shaped by light, material, and quiet proportion.
         </p>
       </div>
 
       <div class="space-y-1 text-sm text-stone-600">
         <p>
-          <a class="transition-colors hover:text-olive" href="mailto:hello@maz.studio">
-            hello@maz.studio
+          <a class="transition-colors hover:text-olive" href="mailto:hello@342studio.pl">
+            hello@342studio.pl
           </a>
         </p>
-        <p>Gdańsk, Poland</p>
+        <p>Szczecin, Poland</p>
         <p class="pt-3 text-stone-400">© {{ year }} 342 studio</p>
       </div>
     </div>

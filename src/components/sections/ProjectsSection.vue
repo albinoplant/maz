@@ -55,7 +55,9 @@ import { projects } from '../../data/projects'
       class="absolute inset-0 z-10 flex items-center justify-center bg-stone-50/40"
       role="status"
     >
-      <p class="font-display text-4xl tracking-wide text-stone-900 md:text-5xl">Coming soon</p>
+      <p class="font-display text-7xl tracking-wide text-stone-900 sm:text-8xl md:text-9xl">
+        coming soon...
+      </p>
     </div>
   </section>
 </template>
