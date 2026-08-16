@@ -7,9 +7,9 @@ const open = ref(false)
 const solid = ref(false)
 
 const links = [
-  { href: '#projects', label: 'projects' },
-  { href: '#about', label: 'about' },
-  { href: '#contact', label: 'contact' },
+  { href: '#projects', label: 'projekty' },
+  { href: '#about', label: 'o nas' },
+  { href: '#contact', label: 'kontakt' },
 ]
 
 function onScroll() {
@@ -47,7 +47,7 @@ onUnmounted(() => {
         <img :src="logo" alt="342." class="h-8 w-auto md:h-9" width="1212" height="813" />
       </a>
 
-      <nav class="hidden items-center gap-10 md:flex" aria-label="Primary">
+      <nav class="hidden items-center gap-10 md:flex" aria-label="Nawigacja główna">
         <a
           v-for="link in links"
           :key="link.href"
@@ -61,7 +61,7 @@ onUnmounted(() => {
       <button
         type="button"
         class="flex h-10 w-10 items-center justify-center md:hidden"
-        aria-label="Open menu"
+        aria-label="Otwórz menu"
         @click="open = true"
       >
         <span class="flex flex-col gap-1.5" aria-hidden="true">
@@ -73,7 +73,7 @@ onUnmounted(() => {
 
     <NDrawer v-model:show="open" placement="right" :width="300" display-directive="show">
       <NDrawerContent title="Menu" closable :native-scrollbar="false">
-        <nav class="mt-4 flex flex-col gap-6" aria-label="Mobile">
+        <nav class="mt-4 flex flex-col gap-6" aria-label="Nawigacja mobilna">
           <a
             v-for="link in links"
             :key="link.href"
@@ -86,7 +86,7 @@ onUnmounted(() => {
         </nav>
         <template #footer>
           <NButton block type="primary" tag="a" href="#contact" @click="close">
-            contact
+            kontakt
           </NButton>
         </template>
       </NDrawerContent>

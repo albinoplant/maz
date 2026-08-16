@@ -6,7 +6,7 @@ import logo from '../../assets/logo-342.png'
   <section
     id="top"
     class="relative flex min-h-[100svh] items-center overflow-hidden bg-white"
-    aria-label="Landing"
+    aria-label="Wstęp"
   >
     <div class="relative z-10 mx-auto flex w-full max-w-7xl flex-col px-6  md:px-10">
       <div class="motion-fade self-center overflow-hidden">
@@ -23,20 +23,20 @@ import logo from '../../assets/logo-342.png'
         class="motion-rise mt-10 max-w-xl self-start font-sans text-lg font-normal leading-relaxed text-stone-800 md:text-xl"
         style="animation-delay: 0.25s"
       >
-        Architecture and interiors measured in light, silence, and material honesty.
+        Wnętrza mierzone światłem, ciszą i szczerością materiału.
       </h1>
       <p
         class="motion-rise mt-3 max-w-md self-start text-sm leading-relaxed text-stone-600"
         style="animation-delay: 0.4s"
       >
-        A studio for calm residential and cultural spaces across Poland and beyond.
+        Pracownia projektowania wnętrz ze Szczecina.
       </p>
       <div class="motion-rise mt-10 self-start" style="animation-delay: 0.55s">
         <a
           href="#about"
           class="inline-flex items-center gap-3 border border-stone-900/30 px-6 py-3 text-sm tracking-wide text-stone-900 transition-colors hover:border-stone-900 hover:bg-stone-900/5"
         >
-          About the studio
+          O studiu
           <span aria-hidden="true">→</span>
         </a>
       </div>

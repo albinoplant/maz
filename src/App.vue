@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import type { GlobalThemeOverrides } from 'naive-ui'
-import { NConfigProvider, NMessageProvider } from 'naive-ui'
+import { NConfigProvider, NMessageProvider, datePlPL, plPL } from 'naive-ui'
 import SiteNav from './components/SiteNav.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import HeroSection from './components/sections/HeroSection.vue'
@@ -46,7 +46,7 @@ const themeOverrides = computed<GlobalThemeOverrides>(() => ({
 </script>
 
 <template>
-  <NConfigProvider :theme-overrides="themeOverrides">
+  <NConfigProvider :locale="plPL" :date-locale="datePlPL" :theme-overrides="themeOverrides">
     <NMessageProvider>
       <div ref="root" class="min-h-screen bg-stone-50 text-stone-900">
         <SiteNav />

@@ -12,7 +12,8 @@ const year = new Date().getFullYear()
       <div>
         <img :src="logo" alt="342." class="h-10 w-auto" width="1212" height="813" />
         <p class="mt-2 max-w-sm text-sm leading-relaxed text-stone-600">
-          Interior design studio. Spaces shaped by light, material, and quiet proportion.
+          Studio projektowania wnętrz. Przestrzenie kształtowane światłem, materiałem i spokojną
+          proporcją.
         </p>
       </div>
 
@@ -22,7 +23,7 @@ const year = new Date().getFullYear()
             hello@342studio.pl
           </a>
         </p>
-        <p>Szczecin, Poland</p>
+        <p>Szczecin, Polska</p>
         <p class="pt-3 text-stone-400">© {{ year }} 342 studio</p>
       </div>
     </div>

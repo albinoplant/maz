@@ -11,15 +11,15 @@ import { projects } from '../../data/projects'
     <div class="pointer-events-none select-none blur-sm" aria-hidden="true">
       <div class="mx-auto max-w-7xl px-6 md:px-10">
         <div class="mb-14 max-w-2xl md:mb-20">
-          <p class="text-xs tracking-[0.2em] text-olive uppercase">Selected</p>
+          <p class="text-xs tracking-[0.2em] text-olive uppercase">Wybrane</p>
           <h2
             id="projects-heading"
             class="mt-3 font-display text-4xl text-stone-900 md:text-5xl"
           >
-            Projects
+            Projekty
           </h2>
           <p class="mt-4 text-base leading-relaxed text-stone-600">
-            A cross-section of recent residential, interior, and cultural work.
+            Przekrój ostatnich realizacji mieszkaniowych i wnętrzarskich.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ import { projects } from '../../data/projects'
       role="status"
     >
       <p class="font-display text-7xl tracking-wide text-stone-900 sm:text-8xl md:text-9xl">
-        coming soon...
+        wkrótce…
       </p>
     </div>
   </section>
